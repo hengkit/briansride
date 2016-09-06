@@ -36,8 +36,8 @@ router.get('/map', function(req,res) {
     Json.find({},{}, function(e,docs){
         res.render('map', {
             "jmap" : docs,
-            lat : 40.78854,
-            lng : -73.96374
+            lat : 41.8781,
+            lng : -87.6298
         });
     });
 });
