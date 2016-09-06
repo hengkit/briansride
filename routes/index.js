@@ -26,7 +26,7 @@ router.get('/mapjson/:name', function (req, res) {
 });
 /* GET layers json data. */
 router.get('/maplayers', function (req, res) {
-    Json.find({},{'name': 1}, function (err, docs) {
+    Json.find({},{'type': 1}, function (err, docs) {
         res.json(docs);
     });
 });
