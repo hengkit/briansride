@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect(MONGO_URI, function (error){
+mongoose.connect(process.env.MONGO_URI, function (error){
   if (error) {
     console.log(error);
   }
