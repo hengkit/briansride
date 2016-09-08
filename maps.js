@@ -13,5 +13,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.geoJson(r66,{
-  onEachFeature: onEachFeature
+  onEachFeature: onEachFeature,
+  pointToLayer: function (feature,latlng) {
+    return L.marker(latlng,{title: feature.properties.name});
+  }
 }).addTo(map);
