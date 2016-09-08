@@ -6,10 +6,8 @@ function onEachFeature(feature, layer) {
     }
   }
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  maxZoom: 18,
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors '
-
+L.tileLayer('http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 L.geoJson(r66,{
