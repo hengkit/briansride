@@ -1,7 +1,8 @@
 var map = L.map('map').setView([41.876209, -87.619057], 10);
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.name) {
-      layer.bindPopup(feature.geometry.type+feature.properties.name);
+      layer.bindPopup(feature.properties.name);
+      layer.marker.title(feature.properties.name);
     }
   }
 
