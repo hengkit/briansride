@@ -1,7 +1,7 @@
 var map = L.map('map').setView([41.876209, -87.619057], 10);
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.name) {
-      layer.bindPopup(feature.properties.name);
+    if (feature.properties && feature.properties.description) {
+      layer.bindPopup(feature.properties.description);
       //layer.marker(feature.latlng,{title: feature.properties.name});
     }
   }
@@ -15,6 +15,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 L.geoJson(r66,{
   onEachFeature: onEachFeature,
   pointToLayer: function (feature,latlng) {
-    return L.marker(latlng,{title: feature.properties.name});
+    if (feature.properties && feature.properties.name) {
+      return L.marker(latlng,{title: feature.properties.name});
+    }
   }
 }).addTo(map);
