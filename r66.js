@@ -1,4 +1,6 @@
- [
+var r66 = {
+  "type": "FeatureCollection",
+  "features": [
     {
       "type": "Feature",
       "geometry": {
@@ -2397,3 +2399,4 @@
       }
     }
   ]
+};
