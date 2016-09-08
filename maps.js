@@ -3,8 +3,6 @@ function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.name) {
       layer.bindPopup(feature.properties.name);
       layer.marker(feature.latlng,{title: feature.properties.name});
-      }
-
     }
   }
 
